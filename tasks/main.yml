@@ -14,6 +14,16 @@
     mode: 0750
   notify: restart elasticsearch
 
+- name: configure Elasticsearch JAM options
+  template:
+    src: jvm.options
+    dest: /etc/elasticsearch/jvm.options
+    owner: root
+    group: elasticsearch
+    mode: 0750
+  notify: restart elasticsearch
+  when: elasticsearch_version >= "5"
+
 - name: Start Elasticsearch.
   service: name=elasticsearch state=started enabled=yes
 

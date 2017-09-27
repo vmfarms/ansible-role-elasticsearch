@@ -5,3 +5,5 @@ elasticsearch_script_inline: true
 elasticsearch_script_indexed: true
 elasticsearch_version: 2.4.5
 elasticsearch_extra_config: {}
+elasticsearch_min_mem: 2g
+elasticsearch_max_mem: 2g
