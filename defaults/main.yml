@@ -4,8 +4,6 @@ elasticsearch_http_port: 9200
 elasticsearch_script_inline: true
 elasticsearch_script_indexed: true
 elasticsearch_version: 2.4.5
-elasticsearch_extra_config: 
-  path:
-    repo: /var/lib/elasticsearch/es_backup_basic
+elasticsearch_extra_config: "" 
 elasticsearch_min_mem: 2g
 elasticsearch_max_mem: 2g
