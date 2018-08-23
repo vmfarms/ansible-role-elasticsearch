@@ -22,6 +22,21 @@
 -Xms{{ elasticsearch_min_mem }}
 -Xmx{{ elasticsearch_max_mem }}
 
+{%- if elasticsearch_extra_jvm_options %}
+
+################################################################
+## Custom Option Set
+################################################################
+##
+## Below are the options added programatically through ansible
+##
+################################################################
+
+{% for option in elasticsearch_extra_jvm_options -%}
+    {{ option }}
+{% endfor -%}
+{%- endif %}
+
 ################################################################
 ## Expert settings
 ################################################################
